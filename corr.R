@@ -21,7 +21,7 @@ corr <- function (directory = "specdata", threshold = 0){
     ## check if number of completely observed cases > the set threshold
     if (nrow(cleandat) > threshold) {
       ## calc the cor of sulfate and nitrate, combine it to corrresult
-      corrresult <- c(corrresult,cor(cleandatlocal$sulfate,cleandatlocal$nitrate))
+      corrresult <- c(corrresult,cor(cleandat$sulfate,cleandat$nitrate))
     }
   } 
   corrresult
